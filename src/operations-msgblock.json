@@ -1,0 +1,55 @@
+{
+	":msgblock-insert": {
+		"label": "t__Message block",
+		"description": "t__Contains a multi-line message or set of messages.",
+		"alternatives": [
+			":_wrap-in-msgblock",
+			":_insert_msgblock"
+		]
+	},
+	":_wrap-in-msgblock": {
+		"steps": [
+			{
+				"type": "transform/setContextNodeIdToSelectionAncestor",
+				"data": {
+					"selectionAncestorNodeSpec": "self::p or self::pre"
+				}
+			},
+			{
+				"type": "operation/wrap-selection-or-container-in-structure",
+				"data": {
+					"childNodeStructure": [
+						"msgblock",
+						[{ "bindTo": "selection.start", "empty": true }],
+						[{ "bindTo": "transclude", "multiple": true, "required": false }],
+						[{ "bindTo": "selection.end", "empty": true }]
+					],
+					"contextNodeId": "{{contextNodeId}}"
+				}
+			}
+		]
+	},
+	":_insert_msgblock": {
+		"steps": {
+			"type": "operation/vertical-insert",
+			"data": {
+				"childNodeStructure": [
+					"msgblock",
+					[{ "bindTo": "selection", "empty": true }]
+				]
+			}
+		}
+	},
+	":contextual-unwrap-msgblock": {
+		"label": "t__Unwrap message block",
+		"description": "t__Remove the message block but preserve its content.",
+		"steps": [
+			{
+				"type": "operation/convert-element",
+				"data": {
+					"nodeNames": ["p"]
+				}
+			}
+		]
+	}
+}

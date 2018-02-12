@@ -1,0 +1,72 @@
+{
+	":toggle-cmdname": {
+		"label": "t__Command name",
+		"description": "t__Contains the text content of a message produced by an application or program.",
+		"steps": {
+			"type": "operation/toggle-inline-frame-element",
+			"data": {
+				"nodeName": "cmdname"
+			}
+		}
+	},
+	":toggle-filepath": {
+		"label": "t__File path",
+		"description": "t__Indicates the name of a referenced file, system path, or both.",
+		"steps": {
+			"type": "operation/toggle-inline-frame-element",
+			"data": {
+				"nodeName": "filepath"
+			}
+		}
+	},
+	":toggle-msgnum": {
+		"label": "t__Message number",
+		"description": "t__Contains the number of a message produced by an application or program.",
+		"steps": {
+			"type": "operation/toggle-inline-frame-element",
+			"data": {
+				"nodeName": "msgnum"
+			}
+		}
+	},
+	":toggle-msgph": {
+		"label": "t__Message phrase",
+		"description": "t__Contains the text content of a message produced by an application or program.",
+		"steps": {
+			"type": "operation/toggle-inline-frame-element",
+			"data": {
+				"nodeName": "msgph"
+			}
+		}
+	},
+	":toggle-systemoutput": {
+		"label": "t__System output",
+		"description": "t__Represents computer output or responses to a command or situation.",
+		"steps": {
+			"type": "operation/toggle-inline-frame-element",
+			"data": {
+				"nodeName": "systemoutput"
+			}
+		}
+	},
+	":toggle-userinput": {
+		"label": "t__User input",
+		"description": "t__Represents the text a user should input in response to a program or system prompt.",
+		"steps": {
+			"type": "operation/toggle-inline-frame-element",
+			"data": {
+				"nodeName": "userinput"
+			}
+		}
+	},
+	":toggle-varname": {
+		"label": "t__Variable name",
+		"description": "t__Specifies a variable that must be supplied to a software application.",
+		"steps": {
+			"type": "operation/toggle-inline-frame-element",
+			"data": {
+				"nodeName": "varname"
+			}
+		}
+	}
+}
